@@ -1,0 +1,359 @@
+/* ESTILO GERAL */
+:root {
+    --amarelo-aceso: #EDC664;
+    --marrom-claro: #A9753A;
+    --claro: #F7F1B8;
+    --marrom-escuro: #936538;
+    --amarelo-opaco: #E2B85E;
+}
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.interface .logo img{
+    width: 15vw;
+    height: auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 8px 30px;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: var(--amarelo-aceso);
+    border: none;
+    border-style: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+h2.titulo{
+    color: var(--marrom-claro);
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: var(--amarelo-aceso);
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+    padding: 10px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: var(--amarelo-opaco);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: var(--claro);
+    transform: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 8px 40px;
+}
+
+.btn-contato button:hover{
+    box-shadow: 0px 0px 8px var(--claro);
+    transform: scale(1.05);
+}
+/*Cabeçalho pronto*/
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 20px 4%;
+    margin-top: -10px;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: var(--marrom-claro);
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: var(--amarelo-opaco);
+    margin: 40px 0;
+    text-align: justify;
+}
+
+/* ANIMAÇÃO DA IMAGEM DO TOPO*/
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/*ESTILO DAS ESPECIALIDADES*/
+section.especialidades{
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 30px
+}
+
+
+.especialidades .especialidades-box{
+    color: var(--claro);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px var(--claro);
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 20px;
+    text-align: center;
+    
+    color: var(--amarelo-opaco);
+    margin: 15px 0;
+
+}
+
+.especialidades .especialidades-box p{
+    font-size: 15px;
+    
+}
+
+.sobre-nos {
+    padding: 40px 4%;
+    
+}
+
+.sobre-nos .titulo {
+    text-align: center;
+    color: var(--marrom-claro); /* Use a cor principal da sua paleta */
+    margin-bottom: 20px;
+}
+
+.sobre-nos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px
+}
+
+.sobre-nos-imagem img {
+    width: 100%;
+    max-width: 600px; /* Ajuste para o tamanho desejado */
+    height: auto;
+    margin-bottom: 100px;
+    border-radius: 500px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.sobre-nos-imagem img:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 2px var(--claro);
+}
+
+.sobre-nos-descricao {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--amarelo-aceso);
+    max-width: 600px;
+    margin-left: 10px; /* Espaçamento entre a imagem e o texto */
+    text-align: justify;
+    
+    
+}
+
+.especialistas {
+    padding: 40px 4%;
+}
+
+.especialistas .titulo-especialistas h2 {
+    text-align: center;
+    color: var(--marrom-claro); /* Cor principal da sua paleta */
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+.especialistas .titulo-especialistas h2 span{
+    color: var(--amarelo-aceso);
+}
+
+.especialistas .flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 120px;
+}
+
+.especialistas img{
+    width: 100%;  /* Faz a imagem se adaptar ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 800px; /* Limite máximo da largura da imagem */
+    object-fit: cover; /* Mantém as proporções e corta a imagem para preencher o container */
+    display: block; /* Evita espaços extras em torno da imagem */
+    margin: 0 auto 0px; /* Centraliza a imagem e adiciona espaço abaixo dela */
+    transition: transform 0.5s ease-in-out, box-shadow 0.2s ease-in-out;
+    
+}
+.especialistas img:hover{
+    transform: scale(1.30);
+    
+}
+
+.especialistas .especialista {
+    width: 450px;
+    height: 500px;
+    background-color: #f7f1b8b2; /* Cor de destaque */
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+.especialistas .especialista h3 {
+    color: var(--marrom-claro);
+    margin-bottom: 10px;
+    font-size: 40;
+    
+}
+
+.especialistas .especialista h4{
+    font-size: 10px;
+    margin-bottom: 1vh
+}
+.especialista p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: justify;
+    
+}
+
+.como-chegar {
+    padding: 40px 4%;
+}
+
+.como-chegar .interface {
+    text-align: center;
+    
+}
+
+.como-chegar .mapa {
+    margin-top: 60px;
+}
+
+.como-chegar .mapa iframe {
+    width: 100%; /* Faz a iframe se adaptar ao tamanho do container */
+    height: 400px; /* Ajuste a altura conforme necessário */
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contato {
+    padding: 40px 4%;
+}
+
+.contato .interface {
+    text-align: center;
+}
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--marrom-claro);
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--amarelo-aceso);
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+}
+
+.contato button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--amarelo-aceso);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato button:hover {
+    background-color: var(--amarelo-opaco);
+}
+
+footer {
+    color: var(--amarelo-aceso);
+    text-align: center;
+    font-size: 10px;
+    padding: 20px 0;
+    margin-top: 60px;
+}
+
+footer .rodape p {
+    margin: 10px 0;
+}
